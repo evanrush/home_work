@@ -1,0 +1,69 @@
+Напишите программу, которая получает на вход три целых числа, по одному числу в строке, и 
+выводит на консоль в три строки сначала максимальное, потом минимальное, после чего оставшееся число.
+_______________________________________________________________________
+a, b, c = int(input()), int(input()), int(input())
+max_int = max(a, b, c)
+min_int = min(a, b, c)
+print(max_int)
+print(min_int)
+print((a + b + c) - max_int - min_int)
+____________________________________________
+a=int(input())                 # Такой код надо писать когда за длину кода вам платят)))
+b=int(input())                 
+c=int(input())
+if c<a<b:
+   print(b)
+   print(c)
+   print(a) 
+if b<c<a:
+   print(a)
+   print(b)
+   print(c)
+if a<b<c:
+   print(c)
+   print(a)
+   print(b)  
+if a<c<b:
+   print(b)
+   print(a)
+   print(c)
+if b<a<c:
+   print(c)
+   print(b)
+   print(a)
+if c<b<a:
+   print(a)
+   print(c)
+   print(b)
+if a==b<c:
+   print(c)
+   print(b)
+   print(a)
+if a==b==c:
+   print(a)
+   print(b)
+   print(c)
+if c==b<a:
+   print(a)
+   print(b)
+   print(c)
+if c==a<b:
+   print(b)
+   print(a)
+   print(c)
+if c<a==b:
+   print(b)
+   print(c)
+   print(a)
+if b<a==c:
+   print(c)
+   print(b)
+   print(a)
+if a<c==b:
+   print(b)
+   print(a)
+   print(c)
+______________________
+print("{2}\n{0}\n{1}".format(*sorted(int(input())for i in[0,1,2])))           
+# метод format не такой читаемый но думаю достаточно понятный
+______________________________________________________________
