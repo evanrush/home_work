@@ -1,0 +1,358 @@
+Узнав, что ДНК не является случайной строкой, только что поступившие в Институт 
+биоинформатики студенты группы информатиков предложили использовать алгоритм сжатия, 
+который сжимает повторяющиеся символы в строке.
+
+Кодирование осуществляется следующим образом:
+s = 'aaaabbсaa' преобразуется в 'a4b2с1a2', то есть группы одинаковых символов 
+исходной строки заменяются на этот символ и количество его повторений в этой позиции строки.
+
+Напишите программу, которая считывает строку, кодирует её предложенным алгоритмом 
+и выводит закодированную последовательность на стандартный вывод. 
+Кодирование должно учитывать регистр символов. 
+_______________________________________________________________________
+dna = input()                    # считываем строку
+print(dna[0],end='')             # выводим первый символ
+cnt = 1                          # счетчик символов на единице
+for i in range(0,len(dna)-1):    # итератор проходит по всем индексам символов кроме предпоследнего
+    if dna[i] == dna[i+1]:       # сравниваем символ по текущему индексу со следующим
+        cnt+=1                   # если символы одинаковые, то увеличиваем счетчик
+    else :
+        print(cnt,end='')        # если разные, то выводим значение счетчика
+        print(dna[i+1],end='')   # выводим следующий символ
+        cnt = 1                  # счетчик текущего символа на единице
+print(cnt)                       # в конце распечатываем значение счетчика последнего символа
+_______________________________________________________________________
+a = input(str())
+s = a[:1]
+c = 1
+out = ''
+for i in a[1:]:
+    if i != s:
+        out += (s + str(c))
+        s = i
+        c = 1
+    else:
+        c += 1
+out += (s + str(c))
+print (out)
+____________________________________________________________________
+# Ну всякое бывает) Скорее до этого этот программист писал на С или Ассемблере
+
+s=input()+'.'
+e, f, g, h, i1, E, F, G, H, I, j, k, l, m, J, K, L, M, n, o, p, q, r, N, O, P, Q, R, s1, t, u, v, S, T, U, V, w, x, y, W, X, Y, z, Z=0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 
+a, b, c, d, A, B, C, D=0, 0, 0, 0, 0, 0, 0, 0
+for i in s:
+    if i=='a':
+        a+=1
+    elif i!='a':
+        if a>0:
+            print('a', end=''), print(a, end='')
+            a=0
+    if i=='b':
+        b+=1
+    elif i!='b':
+        if b>0:
+            print('b', end=''), print(b, end='')
+            b=0       
+    if i=='c':
+        c+=1
+    elif i!='c':
+        if c>0:
+            print('c', end=''), print(c, end='')
+            c=0
+    if i=='A':
+        A+=1
+    elif i!='A':
+        if A>0:
+            print('A', end=''), print(A, end='')
+            A=0
+    if i=='B':
+        B+=1
+    elif i!='B':
+        if B>0:
+            print('B', end=''), print(B, end='')
+            B=0       
+    if i=='C':
+        C+=1
+    elif i!='C':
+        if C>0:
+            print('C', end='')
+            print(C, end='')
+            C=0   
+    if i=='d':
+        d+=1
+    elif i!='d':
+        if d>0:
+            print('d', end=''), print(d, end='')
+            d=0
+    if i=='D':
+        D+=1
+    elif i!='D':
+        if D>0:
+            print('D', end=''), print(D, end='')
+            D=0
+    if i=='e':
+        e+=1
+    elif i!='e':
+        if e>0:
+            print('e', end=''), print(e, end='')
+            e=0
+    if i=='E':
+        E+=1
+    elif i!='E':
+        if E>0:
+            print('E', end=''), print(E, end='')
+            E=0
+    if i=='f':
+        f+=1
+    elif i!='f':
+        if f>0:
+            print('f', end=''), print(f, end='')
+            f=0
+    if i=='F':
+        F+=1
+    elif i!='F':
+        if F>0:
+            print('F', end=''), print(F, end='')
+            F=0
+    if i=='g':
+        g+=1
+    elif i!='g':
+        if g>0:
+            print('g', end=''), print(g, end='')
+            g=0
+    if i=='G':
+        G+=1
+    elif i!='G':
+        if G>0:
+            print('G', end=''), print(G, end='')
+            G=0
+    if i=='h':
+        h+=1
+    elif i!='h':
+        if h>0:
+            print('h', end=''), print(h, end='')
+            h=0
+    if i=='H':
+        H+=1
+    elif i!='H':
+        if H>0:
+            print('H', end=''), print(H, end='')
+            H=0
+    if i=='i':
+        i1+=1
+    elif i!='i':
+        if i1>0:
+            print('i', end=''), print(i1, end='')
+            i1=0
+    if i=='I':
+        I+=1
+    elif i!='I':
+        if I>0:
+            print('I', end=''), print(I, end='')
+            I=0
+    if i=='j':
+        j+=1
+    elif i!='j':
+        if j>0:
+            print('j', end=''), print(j, end='')
+            j=0
+    if i=='J':
+        J+=1
+    elif i!='J':
+        if J>0:
+            print('J', end=''), print(J, end='')
+            J=0
+    if i=='k':
+        k+=1
+    elif i!='k':
+        if k>0:
+            print('k', end=''), print(k, end='')
+            k=0
+    if i=='K':
+        K+=1
+    elif i!='K':
+        if K>0:
+            print('K', end=''), print(K, end='')
+            K=0
+    if i=='l':
+        l+=1
+    elif i!='l':
+        if l>0:
+            print('l', end=''), print(l, end='')
+            l=0
+    if i=='L':
+        L+=1
+    elif i!='L':
+        if L>0:
+            print('L', end=''), print(L, end='')
+            L=0
+    if i=='m':
+        m+=1
+    elif i!='m':
+        if m>0:
+            print('m', end=''), print(m, end='')
+            m=0
+    if i=='M':
+        M+=1
+    elif i!='M':
+        if M>0:
+            print('M', end=''), print(M, end='')
+            M=0
+    if i=='n':
+        n+=1
+    elif i!='n':
+        if n>0:
+            print('n', end=''), print(n, end='')
+            n=0
+    if i=='N':
+        N+=1
+    elif i!='N':
+        if N>0:
+            print('N', end=''), print(N, end='')
+            N=0
+    if i=='O':
+        O+=1
+    elif i!='O':
+        if O>0:
+            print('O', end=''), print(O, end='')
+            O=0
+    if i=='o':
+        o+=1
+    elif i!='o':
+        if o>0:
+            print('o', end=''), print(o, end='')
+            o=0
+    if i=='p':
+        p+=1
+    elif i!='p':
+        if p>0:
+            print('p', end=''), print(p, end='')
+            p=0
+    if i=='P':
+        P+=1
+    elif i!='P':
+        if P>0:
+            print('P', end=''), print(P, end='')
+            P=0
+    if i=='q':
+        q+=1
+    elif i!='q':
+        if q>0:
+            print('q', end=''), print(q, end='')
+            q=0
+    if i=='Q':
+        Q+=1
+    elif i!='Q':
+        if Q>0:
+            print('Q', end=''), print(Q, end='')
+            Q=0
+    if i=='r':
+        r+=1
+    elif i!='r':
+        if r>0:
+            print('r', end=''), print(r, end='')
+            r=0
+    if i=='R':
+        R+=1
+    elif i!='R':
+        if R>0:
+            print('R', end=''), print(R, end='')
+            R=0
+    if i=='s':
+        s1+=1
+    elif i!='s':
+        if s1>0:
+            print('s', end=''), print(s1, end='')
+            s1=0
+    if i=='S':
+        S+=1
+    elif i!='S':
+        if S>0:
+            print('S', end=''), print(S, end='')
+            S=0
+    if i=='t':
+        t+=1
+    elif i!='t':
+        if t>0:
+            print('t', end=''), print(t, end='')
+            t=0
+    if i=='T':
+        T+=1
+    elif i!='T':
+        if T>0:
+            print('T', end=''), print(T, end='')
+            T=0
+    if i=='u':
+        u+=1
+    elif i!='u':
+        if u>0:
+            print('u', end=''), print(u, end='')
+            u=0
+    if i=='U':
+        U+=1
+    elif i!='U':
+        if U>0:
+            print('U', end=''), print(U, end='')
+            U=0
+    if i=='v':
+        v+=1
+    elif i!='v':
+        if v>0:
+            print('v', end=''), print(v, end='')
+            v=0
+    if i=='V':
+        V+=1
+    elif i!='V':
+        if V>0:
+            print('V', end=''), print(V, end='')
+            V=0
+    if i=='w':
+        w+=1
+    elif i!='w':
+        if w>0:
+            print('w', end=''), print(w, end='')
+            w=0
+    if i=='W':
+        W+=1
+    elif i!='W':
+        if W>0:
+            print('W', end=''), print(W, end='')
+            W=0
+    if i=='y':
+        y+=1
+    elif i!='y':
+        if y>0:
+            print('y', end=''), print(y, end='')
+            y=0
+    if i=='Y':
+        Y+=1
+    elif i!='Y':
+        if Y>0:
+            print('Y', end=''), print(Y, end='')
+            Y=0
+    if i=='x':
+        x+=1
+    elif i!='x':
+        if x>0:
+            print('x', end=''), print(x, end='')
+            x=0
+    if i=='X':
+        X+=1
+    elif i!='X':
+        if X>0:
+            print('X', end=''), print(X, end='')
+            X=0
+    if i=='z':
+        z+=1
+    elif i!='z':
+        if z>0:
+            print('z', end=''), print(z, end='')
+            z=0
+    if i=='Z':
+        Z+=1
+    elif i!='Z':
+        if Z>0:
+            print('Z', end=''), print(Z, end='')
+            Z=0
+_______________________________________________________________________
